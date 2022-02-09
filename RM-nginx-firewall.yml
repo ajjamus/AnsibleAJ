@@ -1,3 +1,6 @@
+# This playbook will remove nginx installed on any linux machine and remove any firewall additives
+# This is tested on Fedora linux Detstro.
+
 ---
 - hosts: node
   
