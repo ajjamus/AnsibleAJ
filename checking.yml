@@ -1,3 +1,6 @@
+# This playbook will check for updates and upgrade
+# This is tested on Fedora Destro.
+
 ---
 - hosts: node
   user: root
@@ -8,6 +11,7 @@
 
     - name: upgrade all packages
       raw: /usr/bin/dnf -y upgrade
-    
+      
+      # you can uncomment the below to do an restart for server/client
         #    - name: reboot system
         #      raw: /usr/sbin/reboot
