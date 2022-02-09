@@ -1,0 +1,7 @@
+---
+- hosts: node
+  user: root
+
+  tasks:
+  - name: reboot system
+    raw: /usr/sbin/reboot

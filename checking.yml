@@ -1,0 +1,13 @@
+---
+- hosts: node
+  user: root
+
+  tasks:
+    - name: check for updates
+      raw: /usr/bin/dnf -y update
+
+    - name: upgrade all packages
+      raw: /usr/bin/dnf -y upgrade
+    
+        #    - name: reboot system
+        #      raw: /usr/sbin/reboot

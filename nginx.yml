@@ -1,0 +1,34 @@
+---
+- hosts: node
+  
+  
+  tasks:
+
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
+
+    - name: Firewall enable http
+      firewalld:
+        permanent: yes
+        immediate: yes
+        service: http
+        state: enabled
+
+    - name: firewall enable https
+      firewalld:
+        permanent: yes
+        immediate: yes
+        service: https
+        state: enabled
+
+    - name: Restart firewall
+      systemd:
+        name: firewalld
+        state: reloaded
