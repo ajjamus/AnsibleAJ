@@ -1,3 +1,5 @@
+# This playbook will install nginx web service and allow http and https from firewall
+# This is tested on Fedora destro.
 ---
 - hosts: node
   
