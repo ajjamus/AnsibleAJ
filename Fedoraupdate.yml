@@ -1,0 +1,13 @@
+# This playbook upgrades all Fedora hosts and initialize a reboot.
+#
+
+---
+- hosts: node
+  user: root
+
+  tasks:
+  - name: upgrade all packages
+    raw: /usr/bin/dnf -y upgrade
+
+  - name: reboot system
+    raw: /usr/sbin/reboot
