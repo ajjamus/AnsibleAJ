@@ -1,0 +1,9 @@
+# This file is for ansible hosts to update only
+
+[node]
+192.168.1.141
+192.168.1.142
+192.168.1.143
+[node:vars]
+ansible_user=root
+ansible_password=Ja@359308#
